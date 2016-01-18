@@ -1,0 +1,37 @@
+<%- include ../application/head %>
+
+    <header class="m-all m-padinfull t-all t-padinfull da-all">
+      <h2><%= name %> <span class="username"><%= username %></span></h2>
+    </header>
+
+    <section class="m1 m-padinfull t1 t-padinfull da2">
+      <% if (avatarId) { %>
+      <img src="/users/avatar/<%= avatarId %>" alt="<%= name %>">
+      <% } else { %>
+      <form action="/users/avatar/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="avatar">
+        <button type="submit" name="submit">Upload avatar</button>
+      </form>
+      <% } %>
+    </section>
+
+    <section class="m-all m-padinfull t2-t4 da3-da5">
+
+
+      <form action="/recipes/board" method="post">
+
+          <label for="recipe-board">On which Trello board are your recipes?</label>
+          <select required name="recipeBoard" id="recipe-board">
+            <% boards.forEach(function(board) { %>
+              <option value="<%= board.id %>"><%= board.name %></option>
+            <% }) %>
+          </select>
+
+        <button type="submit" name="submit">Change board</button>
+
+      </form>
+    </section>
+
+
+
+<%- include ../application/foot %>

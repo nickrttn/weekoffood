@@ -1,0 +1,44 @@
+<%- include ../application/head %>
+
+  <main class="recipe-filter">
+
+    <section class="filters da2">
+      <h2>Your recipes</h2>
+      <p>First filter what you'd like to eat this week. Then press the button to get served 5 dishes.</p>
+      <ol>
+        <li>
+          <h3>Filter</h3>
+          <ul>
+          <% lists.forEach(function(list) { %>
+            <li>
+              <label>
+                <input type="checkbox" value="<%= list.id %>"> <%= list.name %>
+              </label>
+            </li>
+          <% }); %>
+          </ul>
+        </li>
+        <li><button type="button" name="randomize">Gimme 5 recipes</button></li>
+        <li>
+          <h3>Do you want to eat this?</h3>
+
+          <form class="thisweek" action="/recipes/thisweek" method="post">
+            <input type="hidden" name="cards" value="">
+            <button type="submit" name="button">Hell yes!</button>
+          </form>
+        </li>
+      </ol>
+
+
+
+    </section>
+
+    <section class="recipes da3-da6">
+      <% cards.forEach(function(card) { %>
+        <%- include card %>
+      <% }); %>
+    </section>
+
+  </main>
+
+<%- include ../application/foot %>

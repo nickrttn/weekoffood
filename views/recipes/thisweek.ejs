@@ -1,0 +1,19 @@
+<%- include ../application/head %>
+
+  <h2>Your menu for the week</h2>
+
+  <main class="menu">
+  <% recipes.forEach(function(recipe) { %>
+    <article class="menu--recipe">
+      <header>
+        <h3><%= recipe.name %></h3>
+        <a href="#">Show more</a>
+      </header>
+      <main>
+        <%- marked(recipe.desc) %>
+      </main>
+    </article>
+  <% }); %>
+  </main>
+
+<%- include ../application/foot %>

@@ -1,0 +1,24 @@
+'use strict';
+
+module.exports = {
+	trello: {
+		requestTokenURL: 'https://trello.com/1/OAuthGetRequestToken',
+    accessTokenURL: 'https://trello.com/1/OAuthGetAccessToken',
+    userAuthorizationURL: 'https://trello.com/1/OAuthAuthorizeToken?name=Week+of+Food&scope=read,account&expiration=never',
+		consumerKey: 'TRELLO_API_KEY',
+		consumerSecret: 'TRELLO_API_SECRET',
+		callbackURL: '/auth/trello/callback',
+		passReqToCallback: true
+	},
+	app: {
+		session: {
+			secret: 'SESSION_SECRET',
+			resave: true,
+			saveUninitialized: false
+		}
+	},
+	mongodb: {
+		host: 'MONGODB_HOST',
+		port: 'MONGODB_PORT'
+	}
+}

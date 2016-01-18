@@ -1,0 +1,16 @@
+<%- include application/head %>
+
+    <article class="introduction da2-da4">
+
+      <h2><%= title %></h2>
+      <p>To use this application you should have a Trello board with recipes. For the best results you should divide them in lists with categories that make sense to you while planning meals, like <em>meat</em>, <em>vegetarian</em>, <em>soups</em>, or <em>dinner</em>, <em>starter</em>, <em>breakfast</em>.</p>
+
+      <% if (!loggedIn) { %>
+      <p class="byline">Click the button below to get started.</p>
+      <a href="/users/login" class="button"><i class="fa fa-lg fa-trello"></i> Log in with Trello</a>
+      <% } else { %>
+      <a href="/recipes" class="button">Go to your recipes</a>
+      <% } %>
+    </article>
+
+<%- include application/foot %>

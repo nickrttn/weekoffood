@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link href="https://get.gridsetapp.com/34643/" rel="stylesheet">
+    <link rel='stylesheet' href='/font-awesome/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body class="wrapper">
+
+    <header class="m-all t-all da1 da-pad masthead">
+      <h1><a href="/" title="Week of Food | Homepage">Week of Food</a></h1>
+
+      <% if (loggedIn) { %>
+      <nav role="navigation">
+        <ul>
+          <li><a href="/recipes">Recipes</a></li>
+          <li><a href="/users"><i class="fa fa-cog"></i></a></li>
+          <li><a href="/users/logout">Log out</a></li>
+        </ul>
+      </nav>
+      <% } %>
+
+    </header>
+
+    <section class="m-all t-all da2-da6">
+
+      <%- include flash %>

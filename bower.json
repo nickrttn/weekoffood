@@ -1,0 +1,38 @@
+{
+  "name": "Week of Food",
+  "description": "An application that parses Trello boards with recipes and gives the user a list of recipes for that week",
+  "main": "app.js",
+  "authors": [
+    "Nick Rutten"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "responsive",
+    "gridset",
+    "external",
+    "api",
+    "trello",
+    "recipes",
+    "food"
+  ],
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "homepage": "nickrttn.me/recipes",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#~4.5.0",
+    "jquery": "~2.2.0",
+    "isotope": "~2.2.2",
+    "underscore": "~1.8.3",
+    "isotope-packery": "~1.1.3"
+  }
+}
