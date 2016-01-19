@@ -88,7 +88,6 @@ router.post('/board', function(req, res, next) {
 router.get('/thisweek', function(req, res, next) {
 
 	// Get our user from the db
-	// CHANGE THE LOOKUP BACK TO _id WHEN DONE
 	User.findOne({ _id: req.session.passport.user }, function(err, user) {
 		console.log(user);
 		res.render('recipes/thisweek', {
@@ -98,7 +97,6 @@ router.get('/thisweek', function(req, res, next) {
 			flash: req.app.locals.flash
 		});
 	});
-
 });
 
 // [POST] /recipes/thisweek

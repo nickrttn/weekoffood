@@ -18,8 +18,9 @@ Week of Food connects to the Trello API. It retrieves one of your boards, on whi
 
 ## To do
 
-- Parse the recipes' markdown to generate a shopping list.
+- Parse the recipes' markdown to generate a shopping list for the whole week.
 - Email a recipe to the users' inbox daily, around a pre-set dinner time.
 - Send a reminder to make a new weekly menu.
 - Make it work with a demonstration board: zero state, baby.
 - Do it all over in MeteorJS as prep for Responsive Web minor.
+- DRY it out.
